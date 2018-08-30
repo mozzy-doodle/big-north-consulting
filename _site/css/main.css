@@ -1,0 +1,324 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+/* 1. Base */
+:root {
+  --primary: #20449b;
+  /* --primary:  #00bcf1; */
+  --swiss-red: #d24839;
+  --swiss-yellow: #e2c81f;
+}
+
+/* 1. Base */
+html {
+  background-color: #00bcf1;
+  background-image: linear-gradient(to bottom right, #00bcf1, #180CAC);
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  min-height: 100vh;
+  min-width: 300px;
+  overflow-x: hidden;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: currentColor;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.caption {
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
+.about {
+  max-width: 44rem;
+}
+
+.content {
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+  /* min-height: 100vh; */
+}
+
+.job,
+.button {
+  font-family: "Montserrat", "Quicksand", sans-serif;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 2.25rem;
+  font-weight: bold;
+  line-height: 1.125;
+  margin-bottom: 0.5rem;
+}
+
+.side {
+  max-height: 20rem;
+  max-width: 20rem;
+}
+
+/* 2. Shared */
+.button,
+.social a {
+  transform-origin: center;
+  transition-duration: 100ms;
+}
+
+.contact {
+display: inline-block;
+margin-top: 1.5rem;
+vertical-align: top;
+}
+
+.description {
+  font-size: 1.5rem;
+}
+
+.wallpaper,
+.picture-shadow,
+.picture-image {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* 3. Specific */
+.button {
+  background-color: #fff;
+  border-radius: 290486px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  color: #9013fe;
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 1.25em 2em;
+  text-shadow: none;
+  transition-property: box-shadow, transform;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+}
+
+.button:hover {
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.02) translateY(-4px);
+}
+
+.button:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  transform: scale(0.98) translateY(-2px);
+}
+
+.description {
+  font-size: 1.5rem;
+}
+
+.social {
+  display: flex;
+  margin-top: .5rem;
+  }
+  .social li {
+  height: 2rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  width: 2rem;
+  }
+
+  .social a {
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    height: 2rem;
+    justify-content: center;
+    opacity: 0.5;
+    transition-property: opacity, transform;
+    width: 2rem;
+    will-change: opacity, transform;
+  }
+
+.wallpaper {
+  /* background-image: url("../images//chicago.jpg"); */
+  background-position: center;
+  background-size: cover;
+  opacity: 0.2;
+  position: fixed;
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.hr {
+  background-color: #ff470f;
+  border: none;
+  content: "";
+  height: 1px;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  transform-origin: center left;
+  width: 4rem;
+}
+
+.job {
+  color: #ffe479;
+  font-size: 0.75rem;
+}
+
+.picture {
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+}
+.picture-shadow {
+  border-radius: 9251991px;
+  background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
+  position: absolute;
+  top: 10%;
+}
+.picture-image {
+  border-radius: 9251991px;
+  position: absolute;
+}
+
+/* 4. Responsiveness */
+@media screen and (max-width: 799px) {
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 3rem;
+  }
+
+  .side {
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .content {
+    align-items: flex-start; /* cross axis vertical*/
+    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+
+  .side {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 20rem;
+    margin-left: 4rem;
+    order: 2;
+    width: 20rem;
+  }
+
+  .about {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+/*Header*/
+
+.header-container {
+  align-items: center;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #F2F2F2;
+  display: flex;
+  flex-direction: row;
+  padding: .3em 0;
+}
+
+.logo {
+  margin-left: 5%;
+}
+
+.logo img {
+  display: block;
+}
+
+nav {
+  margin: 1.5em 0 0 5%;
+}
+
+/*
+ More info on block, inline-block, inline
+ https://www.w3schools.com/css/css_inline-block.asp
+ */
+
+header ul {
+  margin-left: 32px;
+}
+
+header ul li {
+  display: inline-block;
+  padding: 0 1.4em 0 0;
+  font-size: 0.9em;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #7D7C7D;
+}
+
+li a.active {
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  font-weight: 300;
+}
+
+li a:hover {
+  color: #B6B6B6;
+}
+
+
+.content.light {
+  color: var(--primary);
+  background-color: #FFF;
+}
+
+@media screen and (min-width: 800px) {
+  .content.light .about {
+    width: 56rem;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  justify-content: space-around;
+}
+
+.contact a.button {
+  max-width: 150px;
+  margin-top: 20px;
+}
+
+.content.light p.job {
+  font-weight: 700;
+  font-size: 2rem;
+  text-shadow: none;
+  color: var(--swiss-yellow);
+}
+
+.description {
+  font-size: 18px;
+}
+
