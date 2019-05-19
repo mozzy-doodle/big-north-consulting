@@ -14,10 +14,13 @@
 
 /* 1. Base */
 html {
-  background-color: #00bcf1;
-  background-image: linear-gradient(to bottom right, #00bcf1, #180CAC);
+  /* background-color: #00bcf1; */
+  /* background-image: linear-gradient(to bottom right, #00bcf1, #180CAC); */
+  /* background-image: linear-gradient(to bottom right, #094e62, #180CAC); */
+  background-image: linear-gradient(to bottom right, #00358d, #00358d);
   color: #fff;
   font-family: "Quicksand", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -25,7 +28,57 @@ html {
   min-height: 100vh;
   min-width: 300px;
   overflow-x: hidden;
-  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  /* text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.popup {
+  color: black;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.8);
+  z-index: 999999999999;
+
+}
+
+.popup__content {
+  display: table;
+
+  width: 75%;
+  background-color: white;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+overflow: hidden;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+}
+
+.popup__content > img {
+  display: block;
+  width: 100%;
+}
+
+.popup__content .popup__left {
+  display: table-cell;
+  width: 33.333333333333%;
+}
+
+.popup__content .popup__right {
+  display: table-cell;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 67.67%;
+  vertical-align: middle;
+}
+
+.highlight {
+  color: floralwhite;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 a {
@@ -43,10 +96,19 @@ a {
   max-width: 44rem;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
 .content {
   align-items: flex-start;
   display: flex;
   position: relative;
+ 
   /* min-height: 100vh; */
 }
 
@@ -58,7 +120,7 @@ a {
 }
 
 .name {
-  font-size: 2.25rem;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 1.125;
   margin-bottom: 0.5rem;
@@ -214,8 +276,6 @@ vertical-align: top;
 @media screen and (min-width: 800px) {
   .content {
     align-items: flex-start; /* cross axis vertical*/
-    justify-content: space-evenly;
-    justify-content: space-around;
     padding: 2rem;
   }
 
@@ -238,11 +298,17 @@ vertical-align: top;
 
 .header-container {
   align-items: center;
+  font-weight: 700;
   background-color: #f2f2f2;
   border-bottom: 1px solid #F2F2F2;
   display: flex;
   flex-direction: row;
   padding: .3em 0;
+}
+
+.header-container ul {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -319,6 +385,9 @@ li a:hover {
 }
 
 .description {
+  line-height: 2rem;
+    color: #ffffffa8;
+    font-weight: 600;
   font-size: 18px;
 }
 
