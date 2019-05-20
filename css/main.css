@@ -43,6 +43,7 @@ html {
 
 }
 
+.limited-width { max-width: 40rem; }
 
 
 
@@ -101,10 +102,12 @@ a.link {
   padding-top: 0 !important;
 }
 
-.limited-width { max-width: 40rem; }
-
 .content {
+  align-items: flex-start;
+  display: flex;
   position: relative;
+ 
+  /* min-height: 100vh; */
 }
 
 .content .content__right {
@@ -262,9 +265,8 @@ vertical-align: top;
 /* 4. Responsiveness */
 @media screen and (max-width: 599px) {
   .content {
-    
-  
-    padding: 5rem 3rem;
+    justify-content: center;
+    padding: 3rem 3rem;
   }
 
   .side {
