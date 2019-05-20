@@ -101,6 +101,8 @@ a.link {
   padding-top: 0 !important;
 }
 
+.limited-width { max-width: 40rem; }
+
 .content {
   position: relative;
 }
