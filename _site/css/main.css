@@ -43,19 +43,9 @@ html {
 
 }
 
-.popup__content {
-  display: table;
 
-  width: 75%;
-  background-color: white;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-overflow: hidden;
-  border-radius: 3px;
-  transform: translate(-50%, -50%);
-}
+
+
 
 .popup__content > img {
   display: block;
@@ -87,6 +77,13 @@ a {
   text-decoration: none;
 }
 
+a.link {
+  color: currentColor;
+  text-decoration: underline;
+}
+
+
+
 .caption {
   font-family: 'Roboto';
   font-size: 14px;
@@ -105,11 +102,13 @@ a {
 }
 
 .content {
-  align-items: flex-start;
-  display: flex;
   position: relative;
- 
-  /* min-height: 100vh; */
+}
+
+.content .content__right {
+  margin-left: auto;
+  padding: 0 2rem;
+  max-width: 40rem;
 }
 
 .job,
@@ -259,11 +258,10 @@ vertical-align: top;
 }
 
 /* 4. Responsiveness */
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 599px) {
   .content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
+  
     padding: 5rem 3rem;
   }
 
